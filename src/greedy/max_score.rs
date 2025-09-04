@@ -1,3 +1,4 @@
+use crate::greedy::Solution;
 
 impl Solution {
     pub fn maximum_gain(s: String, x: i32, y: i32) -> i32 {
@@ -36,6 +37,6 @@ impl Solution {
             new_stk.push(curr);
         }
 
-        return result;
+        result
     }
 }
