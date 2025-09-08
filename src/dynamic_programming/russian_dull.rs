@@ -1,5 +1,5 @@
 use std::cmp::Ordering;
-use std::cmp;
+use std::cmp::max;
 use super::Solution;
 
 impl Solution {
@@ -35,7 +35,7 @@ impl Solution {
         if prev == -1 ||
             (&envelopes[curr as usize][0usize] > &envelopes[prev as usize][0usize] &&
                 &envelopes[curr as usize][1usize] > &envelopes[prev as usize][1usize]) {
-            dont = cmp::max(dont, 1 + Self::dp(l, curr, curr + 1, memo, envelopes));
+            dont = max(dont, 1 + Self::dp(l, curr, curr + 1, memo, envelopes));
         }
 
         memo[(prev+1) as usize][curr as usize] = dont;
