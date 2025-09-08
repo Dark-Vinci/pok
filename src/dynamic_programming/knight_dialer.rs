@@ -52,7 +52,7 @@ impl Solution {
 
         for dir in dirs.iter() {
             let (xx, yy) = (x + dir[0], y + dir[1]);
-            result = min(result, Self::knight_dialer_helper(xx, yy, zz, n, pattern, dirs, memo));
+            result = (((result + Self::knight_dialer_helper(xx, yy, zz, n, pattern, dirs, memo)) as i64) % Self::MOD) as i32;
         }
 
         memo[x as usize][y as usize][z as usize] = result;
