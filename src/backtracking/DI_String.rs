@@ -2,6 +2,8 @@ use std::collections::HashSet;
 use crate::backtracking::Solution;
 
 impl Solution {
+    const MOD: u32 = 1_000_000_007;
+    
     fn dfs(s: String, prev: i32, curr: i32, str: &str, used: &mut HashSet<i32>) -> Vec<String> {
         if curr == s.len() as i32 {
             return vec![str.to_string()];
