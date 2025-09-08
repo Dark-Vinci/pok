@@ -1,6 +1,7 @@
 mod russian_dull;
 mod min_falling_path_sum;
 mod min_path_falling_sum_2;
+mod knight_dialer;
 
 struct Solution;
 

@@ -3,10 +3,9 @@ use super::Solution;
 
 impl Solution {
     pub fn min_path_sum(matrix: Vec<Vec<i32>>) -> i32 {
-        let (l, ll) = (matrix.len(), matrix[0].len());
+        let (l, ll, mut result) = (matrix.len(), matrix[0].len(), i32::MAX);
 
         let mut memo = vec![vec![i32::MAX; ll]; l];
-        let mut result = i32::MAX;
 
         for j in 0..ll {
             result = min(result, Self::min_path_sum_helper(0, j as i32, l as i32, ll as i32, &mut memo, &matrix))
