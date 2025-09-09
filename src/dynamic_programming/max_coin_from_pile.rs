@@ -22,7 +22,7 @@ impl Solution {
         let dont = Self::max_value_of_coin_dp(i + 1, kk, n, memo, piles);
         let (mut sum, mut result) = (0, 0);
 
-        for j in 0..min(kk, piles.len() as i32) {
+        for j in 0..min(kk, piles[i as usize].len() as i32) {
             sum += piles[i as usize][j as usize];
             result = max(result, sum + Self::max_value_of_coin_dp(i + 1, kk - j - 1, n, memo, piles));
         }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      

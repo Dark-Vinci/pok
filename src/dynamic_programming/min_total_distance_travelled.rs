@@ -30,8 +30,8 @@ impl Solution {
             return i64::MAX;
         }
 
-        if memo[r as usize][r as usize] != -1 {
-            return memo[r as usize][r as usize];
+        if memo[r as usize][f as usize] != -1 {
+            return memo[r as usize][f as usize];
         }
 
         let (mut dont, mut doe) = (Self::min_total_distance_dfs(r, f - 1, memo, robots, factories), Self::min_total_distance_dfs(r - 1, f - 1, memo, robots, factories));
@@ -41,8 +41,8 @@ impl Solution {
             dont = min(dont, doe)
         }
 
-        memo[r as usize][r as usize] = doe;
+        memo[r as usize][f as usize] = dont;
 
-        memo[r as usize][r as usize]
+        memo[r as usize][f as usize]
     }
 }
