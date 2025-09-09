@@ -4,6 +4,7 @@ mod min_path_falling_sum_2;
 mod knight_dialer;
 mod tribonacci;
 mod min_total_distance_travelled;
+mod max_coin_from_pile;
 
 struct Solution;
 
