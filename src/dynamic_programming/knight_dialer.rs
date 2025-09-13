@@ -1,4 +1,3 @@
-use std::cmp::min;
 use super::Solution;
 
 impl Solution {

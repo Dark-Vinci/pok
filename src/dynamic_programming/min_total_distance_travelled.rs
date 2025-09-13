@@ -7,7 +7,7 @@ impl Solution {
         let r = robots.len();
 
         for fac in factories {
-            for i in 0..fac[1] {
+            for _i in 0..fac[1] {
                 mod_factories.push(fac[0])
             }
         }
