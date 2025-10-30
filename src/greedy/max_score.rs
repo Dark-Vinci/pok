@@ -1,5 +1,12 @@
 use crate::greedy::Solution;
 
+// std::mem::replace
+// std::mem::swap
+// std::mem::take
+// std::mem::size_of;
+// std::mem::size_of_val;
+
+
 impl Solution {
     pub fn maximum_gain(s: String, x: i32, y: i32) -> i32 {
         let mut result = 0;
