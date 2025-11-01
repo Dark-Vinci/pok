@@ -1,5 +1,6 @@
 mod di_string;
 mod generate_parenthesis;
+mod sudoku;
 
 struct Solution;
 
