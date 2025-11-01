@@ -53,9 +53,9 @@ impl Solution {
 
         let mut dont = Self::is_subsequence_dp(curr + 1, indx, s, t, memo);
 
-        // we can unwrap safely because of the initial checks [WE DONT EVEN NEED TO UNWRAP]
-        if s.chars().nth(indx as usize) == t.chars().nth(curr as usize) {
-            dont = dont || Self::is_subsequence_dp(curr + 1, indx + 1, s, t, memo);
+        // we can unwrap safely because of the initial checks [WE DON'T EVEN NEED TO UNWRAP]
+        if !dont && s.chars().nth(indx as usize) == t.chars().nth(curr as usize) {
+            dont = Self::is_subsequence_dp(curr + 1, indx + 1, s, t, memo);
         }
 
         if dont {
